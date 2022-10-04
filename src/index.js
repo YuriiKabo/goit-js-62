@@ -424,20 +424,24 @@ for (let i = 0; i < planets.length; i += 1) {
   console.log(planets[i]);
 } */
 
-/* function caclculateAverage1(order) {
+function caclculateAverage1(order) {
   let total = 0;
 
-  // Change code below this line
   for (let i = 0; i < order.length; i += 1) {
     total += order[i] /= order.length;
     if (Number.isNaN(order[i])) {
       return "Аргументи мають інші символи окрім чисел!";
     }
   }
-  return `Середнє арифметичне ${total}`;
+  total = Math.round(total * 10) / 10;
+  return `Середнє арифметичне масива "caclculateAverage1" дорівнює ${total}`;
 }
-console.log(caclculateAverage1(["w1", 27, 2]));
-console.log(caclculateAverage1([5, 23, 47])); */
+console.log(caclculateAverage1(["3w1", 27, 2]));
+console.log(caclculateAverage1([9, 2, 2]));
+/* let quantity = prompt("Введите количество товаров!");
+quantity = Number(quantity);
+quantity = Number.isNaN(quantity);
+console.log(!quantity); */
 
 /* function avg() {
   let sum = 0;
@@ -451,11 +455,104 @@ console.log(caclculateAverage1([5, 23, 47])); */
 
 console.log(avg(1, 2, "w", "f")); */
 
-function findLongestWord(string) {
+/* function findLongestWord(string) {
   let line = string.split(" ");
   for (let i = 0; i < string.length; i += 1) {
     line = line[i];
   }
   return line;
 }
-console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); */
+
+/* function findLongestWord(string) {
+  string = string.split(" ");
+  let maxLongWord = string[0];
+  for (let word of string) {
+    if (word.length > maxLongWord.length) {
+      maxLongWord = word;
+    }
+  }
+  return maxLongWord;
+}
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); */
+
+/* function createArrayOfNumbers(min, max) {
+  const numbers = [];
+
+   for (let i = min; i <= max; i++) {
+  numbers.push(i);
+   }
+
+  return numbers;
+} */
+
+/* function checkFruit(fruit) {
+  const fruits = ["apple", "plum", "pear", "orange"];
+
+  return fruits.includes(fruit); // Change this line
+}
+console.log(checkFruit("apple")); */
+
+/* function filterArray(numbers, value) {
+  const filteredNumbers = [];
+  for (let number of numbers) {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  }
+  return filteredNumbers;
+} */
+
+/* function getEvenNumbers(start, end) {
+  const numbers = [];
+  for (let i = start; i <= end; i += 1) {
+    if (i % 2 === 0) {
+      numbers.push(i);
+    }
+  }
+  return numbers;
+} */
+
+/* function findNumber(start, end, divisor) {
+  for (let i = start; i < end; i += 1) {
+    if (i % divisor === 0) {
+      return i;
+    }
+  }
+} */
+
+/* function includes(array, value) {
+
+  const filteredNumbers = [];
+    for (let number of array) {
+      if (number === value) {
+        return true;
+      } 
+    }
+    return false;
+  }  */
+/* const moyaCard = 804;
+const payoneer = 36625;
+const nalPayoneer = 4000;
+const NMAPO = 5600;
+const eat = -4000;
+const lviv = -3000;
+const videocard = -14500;
+const artem = -8000;
+const yurii = -8000;
+const rest = -461;
+const ostatokCard = 12097;
+
+const total =
+  moyaCard +
+  payoneer +
+  nalPayoneer +
+  NMAPO +
+  artem +
+  eat +
+  lviv +
+  videocard +
+  yurii +
+  rest -
+  ostatokCard;
+console.log(total); */
