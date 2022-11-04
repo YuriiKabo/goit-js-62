@@ -424,7 +424,7 @@ for (let i = 0; i < planets.length; i += 1) {
   console.log(planets[i]);
 } */
 
-function caclculateAverage1(order) {
+/* function caclculateAverage1(order) {
   let total = 0;
 
   for (let i = 0; i < order.length; i += 1) {
@@ -436,14 +436,15 @@ function caclculateAverage1(order) {
   total = Math.round(total * 10) / 10;
   return `Середнє арифметичне масива "caclculateAverage1" дорівнює ${total}`;
 }
-console.log(caclculateAverage1(["3w1", 27, 2]));
-console.log(caclculateAverage1([9, 2, 2]));
+console.log(caclculateAverage1([3, "3w1", 3]));
+console.log(caclculateAverage1([9, 2, 8])); */
+
 /* let quantity = prompt("Введите количество товаров!");
 quantity = Number(quantity);
 quantity = Number.isNaN(quantity);
 console.log(!quantity); */
 
-/* function avg() {
+/* function avg() {s
   let sum = 0;
 
   for (let i = 0; i < arguments[i]; i += 1) sum += arguments[i];
@@ -556,3 +557,394 @@ const total =
   rest -
   ostatokCard;
 console.log(total); */
+
+/* function caclculateAverage(order) {
+  let total = 0;
+  let length = order.length;
+  let nan = false;
+
+  for (let i = 0; i < order.length; i += 1) {
+    if (isNaN(order[i])) {
+      length -= 1;
+      nan = true;
+    } else {
+      total += order[i];
+    }
+  }
+  let average = total / length;
+  average = Math.round(average * 10) / 10;
+
+  if (nan) {
+    return `Середнє арифметичне масива дорівнює ${average}, 
+    але в ньому знайдено інші символи окрім чисел, яки були видалені`;
+  } else {
+    return `Середнє арифметичне масива дорівнює ${average}`;
+  }
+}
+console.log(caclculateAverage(["2", 0, 0]));
+console.log(caclculateAverage([12, 2, 8])); */
+
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = "Манго";
+
+// console.log(dog); // {name: 'Манго'}
+// console.log(dog.name); // 'Манго'
+// console.log(dog.legs); // 4
+
+/* const animal = {
+  legs: 4,
+};
+const dog = Object.create(animal);
+dog.name = "Mango";
+
+console.log(dog); // {name: 'Mango'}
+console.log(dog.name); // 'Mango'
+console.log(dog.legs); // 4
+console.log(animal); */
+
+/* function countTotalSalary(salaries) {
+  let totalSalary = 0;
+  const values = Object.values(salaries);
+  for (let i = 0; i < values.length; i += 1) {
+    totalSalary += values[i];
+  }
+  return totalSalary;
+}
+console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 })); */
+
+// Напиши функцию getAllPropValues(propName) которая принимает
+// один параметр propName - имя (ключ) свойства. Функция должна
+// вернуть массив всех значений свойства с таким именем из каждого
+// объекта в массиве products. Если в объектах нет свойства с таким именем,
+// функция должна вернуть пустой массив.
+// ПОПРОСИТЬ ОБЬСНИТЬ
+
+/* const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function getAllPropValues(propName) {
+  // Change code below this line
+  let price = [];
+  for (let product of products) {
+    let num = product[propName];
+    if (num) {
+      price.push(num);
+    }
+  }
+  return price;
+}
+console.log(getAllPropValues("quantity")); */
+
+/* const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function calculateTotalPrice(productName) {
+  let total = 0;
+  for (let product of products) {
+    if (product.name === productName) {
+      total = product.price * product.quantity;
+    }
+  }
+  return total;
+}
+console.log(calculateTotalPrice("Grip"));
+console.log(calculateTotalPrice("Radar")); */
+
+/* const forecast = {
+  today: {
+    low: 28,
+    high: 32,
+    icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+  },
+  tomorrow: {
+    low: 27,
+    high: 31,
+  },
+};
+// Change code below this line
+const {
+  today: {
+    low: lowToday,
+    high: highToday,
+    icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+  },
+  tomorrow: {
+    low: lowTomorrow,
+    high: highTomorrow,
+    icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+  },
+} = forecast; */
+// const highToday = forecast.today.high;
+// const lowToday = forecast.today.low;
+// const todayIcon = forecast.today.icon;
+
+// const highTomorrow = forecast.tomorrow.high;
+// const lowTomorrow = forecast.tomorrow.low;
+// const tomorrowIcon = forecast.tomorrow.icon;
+
+/* function addOverNum(firstArg, ...args) {
+  let total = 0;
+
+  for (const arg of args) {
+    if (arg > firstArg) {
+      total += arg;
+    }
+  }
+  return total;
+}
+console.log(addOverNum(50, 15, 27));
+console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+console.log(addOverNum(15, 32, 6, 13, 19, 8)); */
+
+/* function findMatches(array, ...args) {
+  const matches = []; // Don't change this line
+for (let arg of array) {
+  if(args.includes(arg)) {
+    matches.push(arg);
+  };
+}
+  // Change code above this line
+  return matches;
+} */
+/* const bookShelf = {
+  books: [10, 20, 30],
+  updateBook(oldName, newName) {
+    // Change code below this line
+    const bookIndex = this.books.indexOf(oldName);
+    this.books.splice(bookIndex, 1, newName);
+
+    return this.books;
+    // Change code above this line
+  },
+};
+console.log(bookShelf.updateBook(10, "Саша", "Костя")); */
+
+/* const atTheOldToad = {
+  potions: ["Speed potion", "Dragon breath", "Stone skin"],
+  removePotion(potionName) {
+    const potionNameIndex = this.potions.indexOf(potionName);
+    this.potions.splice(potionNameIndex, 1);
+    return this.potions;
+  },
+};
+console.log(atTheOldToad.removePotion("Dragon breath"));
+ */
+
+/* const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    for (let potion of this.potions) {
+      if (potion.name === newPotion.name) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      }
+    }
+    this.potions.push(newPotion);
+  },
+
+  removePotion(potionName) {
+    for (let potion of this.potions) {
+      const potionIndex = this.potions.indexOf(potion);
+      if (potion.name === potionName) {
+        this.potions.splice(potionIndex, 1);
+      }
+    }
+    return `Potion ${potionName} is not in inventory!`;
+  },
+
+  updatePotionName(oldName, newName) {
+    for (let potion of this.potions) {
+      if (potion.name === oldName) {
+        potion.name = newName;
+        // this.potions.splice(potion, 1, newName);
+      }
+    }
+    return `Potion ${oldName} is not in inventory!`;
+  },
+  // Change code above this line
+}; */
+/* function processCall(recipient, onAvailable, onNotAvailable) {
+  // Имитируем доступность абонента случайным числом
+  const isRecipientAvailable = Math.random() > 0.5;
+
+  if (!isRecipientAvailable) {
+    onNotAvailable(recipient);
+    return;
+  }
+
+  onAvailable(recipient);
+}
+
+function takeCall(name) {
+  console.log(`Соединяем с ${name}, ожидайте...`);
+  // Логика принятия звонка
+}
+
+function activateAnsweringMachine(name) {
+  console.log(`Абонент ${name} недоступен, оставьте сообщение.`);
+  // Логика активации автоответчика
+}
+
+function leaveHoloMessage(name) {
+  console.log(`Абонент ${name} недоступен, записываем голограмму.`);
+  // Логика записи голограммы
+}
+
+processCall("Манго", takeCall, activateAnsweringMachine);
+processCall("Поли", takeCall, leaveHoloMessage); */
+
+/* function repeatLog(n) {
+  for (let i = 0; i < n; i += 1) {
+    console.log(i);
+  }
+}
+
+repeatLog(11); */
+
+/* const numbers = [5, 10, 15, 20, 25];
+
+// Объявление функции
+numbers.forEach(function (number, index) {
+  console.log(`Индекс ${index}, значение ${number}`);
+});
+
+// Анонимная стрелочная функция
+numbers.forEach((number, index) => {
+  console.log(`Индекс ${index}, значение ${number}`);
+}); */
+
+// Колбэк-функция
+/* function greet(name) {
+  consle.log(`Добро пожаловать ${name}.`);
+}
+
+// Функция высшего порядка
+function registerGuest(name, callback) {
+  console.log(`Регистрируем гостя ${name}.`);
+  callback(name);
+}
+
+registerGuest("Mango", greet); */
+/* const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+const evenNumbers = numbers.filter((number) => number % 2 === 0);
+const oddNumbers = numbers.filter((number) => number % 2);
+console.log(evenNumbers);
+console.log(oddNumbers); */
+
+/* const users = [
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male",
+    age: 37,
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female",
+    age: 34,
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male",
+    age: 24,
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female",
+    age: 21,
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male",
+    age: 27,
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male",
+    age: 38,
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female",
+    age: 39,
+  },
+];
+const getInactiveUsers = (users) =>
+  users.filter((user) => user.isActive === true);
+
+user.isActive(); */
+
+class Storage {
+  constructor({ items }) {
+    this.items = items;
+  }
+  getItems() {
+    return this.items;
+  }
+  addItem(newItem) {
+    Storage.items.push(newItem);
+  }
+  removeItem(itemToRemove) {
+    let itemIndex = this.items.indexOf(itemToRemove);
+    this.items.splice(itemIndex, 1);
+  }
+}
+
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
